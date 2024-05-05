@@ -1,62 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Job Fair Registration</title>
   </head>
   <body>
-    <div class="header"><h1 id="title">Job Fair Registration</h1>
-    <p id="description">Please fill this form so that we can make sure you get the most out of our event.</p></div>
+    <div class="header">
+      <h1 id="title">Job Fair Registration</h1>
+      <p id="description">
+        Please fill this form so that we can make sure you get the most out of
+        our event.
+      </p>
+    </div>
     <form method="post" action="/" id="survey-form">
-    <fieldset>
-      <label id="name-label" for="name">Name<input  id="name" name="name" type="text" placeholder="Emily Brown" required/></label>
-      <label id="email-label" for="email">Email<input  id="email" name="email" type="email" placeholder="emilybrown@jobhuntmail.uk" required/></label>
-      <label id="number-label" for="number">Phone number<input  id="number" name="number" type="number" pattern="[0-9]" min="10" max="16"
-  required" placeholder="442071234567"/>
-</label>
-
-    </fieldset>
-    <fieldset>
-      <label>Highest completed level of education<select id="dropdown"><option></option>
-      <option>High school</option>
-      <option>BA/Bsc</option><option>MA/Msc</option>
-      <option>Phd</option>
-      <option>Other</option></select></label>
-      <p>Are you currently enrolled as a student?</p>
-      <label for="yes">
-  <input type="radio" id="yes" name="studystatus" value="yes" class="inline" checked/> Yes
-</label>
-<label for="no">
-  <input type="radio" id="no" name="studystatus" value="no" class="inline"/> No
-</label>
-      
-    </fieldset>
-   <fieldset>
-     <p>What field are you interested in?</p>
-     <label for="marketing">
-<input type="checkbox" id="marketing" name="field" value="marketing" class="inline" checked /> Marketing</label>
-<label for="Business"><input type="checkbox" id="business" name="field" value="business" class="inline" /> Business</label>
-<label for="it"><input type="checkbox" id="it" name="field" value="it" class="inline"/> IT</label>
-<label for="finance"><input type="checkbox" id="finance" name="field" value="finance" class="inline" /> Finance</label>
-<label for="hr"><input type="checkbox" id="hr" name="field" value="hr" class="inline" /> HR</label>
-<label for="other"><input type="checkbox" id="other" name="field" value="other" class="inline"  /> Other (specify below)</label>
-<label for="preference"> If you chose "Other", please specify what field you're interested in.
-<textarea id="preference" name="preference" placeholder="E.g. Education, Medical ..." />
-</textarea></label>
-<p class="note">(Please select at least one option.)</p>
-
-     </fieldset>
-     <fieldset>
-       <label for="terms-and-conditions">
-<input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" value="checkbox"/>
-I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-  </label>
-  <label for="submit">
-        <input type="submit" id="submit" value="Submit"/>
-           
-         </label>
-       </fieldset>
+      <fieldset>
+        <label id="name-label" for="name"
+          >Name<input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Emily Brown"
+            required
+        /></label>
+        <label id="email-label" for="email"
+          >Email<input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="emilybrown@jobhuntmail.uk"
+            required
+        /></label>
+        <label id="number-label" for="number"
+          >Phone number (format: 1234567890)<input
+            id="number"
+            name="number"
+            type="tel"
+            pattern="[0-9]{10,}"
+            required
+            placeholder="442071234567"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label
+          >Highest completed level of education<select id="dropdown">
+            <option></option>
+            <option>High school</option>
+            <option>BA/Bsc</option>
+            <option>MA/Msc</option>
+            <option>Phd</option>
+            <option>Other</option>
+          </select></label
+        >
+        <p>Are you currently enrolled as a student?</p>
+        <label for="yes">
+          <input
+            type="radio"
+            id="yes"
+            name="studystatus"
+            value="yes"
+            class="inline"
+            checked
+          />
+          Yes
+        </label>
+        <label for="no">
+          <input
+            type="radio"
+            id="no"
+            name="studystatus"
+            value="no"
+            class="inline"
+          />
+          No
+        </label>
+      </fieldset>
+      <fieldset>
+        <p>What field are you interested in?</p>
+        <label for="marketing">
+          <input
+            type="checkbox"
+            id="marketing"
+            name="field"
+            value="marketing"
+            class="inline"
+            checked
+          />
+          Marketing</label
+        >
+        <label for="Business"
+          ><input
+            type="checkbox"
+            id="business"
+            name="field"
+            value="business"
+            class="inline"
+          />
+          Business</label
+        >
+        <label for="it"
+          ><input
+            type="checkbox"
+            id="it"
+            name="field"
+            value="it"
+            class="inline"
+          />
+          IT</label
+        >
+        <label for="finance"
+          ><input
+            type="checkbox"
+            id="finance"
+            name="field"
+            value="finance"
+            class="inline"
+          />
+          Finance</label
+        >
+        <label for="hr"
+          ><input
+            type="checkbox"
+            id="hr"
+            name="field"
+            value="hr"
+            class="inline"
+          />
+          HR</label
+        >
+        <label for="other"
+          ><input
+            type="checkbox"
+            id="other"
+            name="field"
+            value="other"
+            class="inline"
+          />
+          Other (specify below)</label
+        >
+        <label for="preference">
+          If you chose "Other", please specify what field you're interested in.
+          <textarea
+            id="preference"
+            name="preference"
+            placeholder="E.g. Education, Medical ..."
+          ></textarea>
+        </label>
+        <p class="note">(Please select at least one option.)</p>
+      </fieldset>
+      <fieldset>
+        <label for="terms-and-conditions">
+          <input
+            class="inline"
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            value="checkbox"
+          />
+          I accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >terms and conditions</a
+          >
+        </label>
+        <label for="submit">
+          <input type="submit" id="submit" value="Submit" />
+        </label>
+      </fieldset>
     </form>
   </body>
 </html>
